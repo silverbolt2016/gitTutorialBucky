@@ -1,0 +1,91 @@
+Git Tutorial 2 - Configure username and email
+
+To set username/name
+git config --global user.name "John Doe"
+// global refers to the configs for this user not the entire system
+
+To set email
+git config --global user.email "john@doe.com"
+
+To see all your settings/configurations:
+git config --list
+
+To see a particular config setting
+git config user.email
+
+
+For help:
+git help
+To get help on "commit"
+git help commit
+
+
+Git Tutorial 3 - Creating our first respository
+1. Create the directory you want to contain your project files
+2. Once inside the folder, type "git init"
+
+
+The dot in current refers to the current directory.
+The dot dot refers to the parent directory of the current directory
+
+
+To make a commit
+Version 1
+git add .
+git commit -m "This is a message"
+
+Version one adds all the files in the current directory for a commit
+
+Version 2
+git add fileName
+git commit -m "This is a message"
+
+
+-- To see commit history
+git log
+
+
+-- To see the commits from a paricular user
+git log --author="Bucky"
+You dont have to type of the whole name just part of the name
+
+
+-- To see the status of your current repository
+git status
+
+untracked files are files that git is not tracking (they have not been added before)
+
+lifecycle of a file:
+1. working copy > 2. staging area > 3.repository
+1. The file as it is on computer
+2. The file in a particular state that has been flaged for a commit
+3. The file after it has been committed
+
+
+
+-- To see the differences between the working copy and what is in the repository
+git status
+git diff
+//Shoes
+
+
+-- To compare files in staged area to repository
+git diff --staged
+
+
+-- How to delete files
+1. git rm fileName
+// removes the file called fileName from the repository and the working directory
+2. git commit -m "This is the point in time we deleted fileName"
+After you delete a file you need to commit the delelte
+
+-- How to Move and rename files
+How to rename a file
+git mv orignalName newName
+
+-- To move a file to another folder
+git mv theFile.txt DirectoryName
+
+--To move and rename 
+git mv theFile.txt DirectoryName/newName.txt
+
